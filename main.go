@@ -1,13 +1,15 @@
 package main
 
-import "go1K/practice"
+import "go1K/practice/json_read_write"
 
 func main() {
 	//	practice.IntroStuffs()
 	//practice.Exercises()
 	//practice.StringStuff()
 	//practice.StructsStuff()
-	practice.StructLogParser()
+	//practice.LogParser()
+	//json_read_write.JSONStructWrite()
+	json_read_write.JSONStructRead()
 	//practice.FunctionStuff()
 
 }

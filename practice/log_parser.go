@@ -22,7 +22,7 @@ type parser struct {
 
 }
 
-func StructLogParser() {
+func LogParser() {
 
 	p := parser{
 		sum: make(map[string]result),
