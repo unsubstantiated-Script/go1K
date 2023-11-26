@@ -1,8 +1,6 @@
 package main
 
-import (
-	"go1K/practice/json_read_write"
-)
+import "go1K/practice/json_read_write"
 
 func main() {
 	//	practice.IntroStuffs()
@@ -10,7 +8,7 @@ func main() {
 	//practice.StringStuff()
 	//practice.StructsStuff()
 	//practice.LogParser()
-	//practice.JSONStructWrite()
+	//json_read_write.JSONStructWrite()
 	json_read_write.JSONStructRead()
 	//practice.FunctionStuff()
 
