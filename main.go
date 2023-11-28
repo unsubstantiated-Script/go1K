@@ -1,6 +1,8 @@
 package main
 
-import "go1K/practice/json_read_write"
+import (
+	"go1K/practice/game_store"
+)
 
 func main() {
 	//	practice.IntroStuffs()
@@ -9,7 +11,8 @@ func main() {
 	//practice.StructsStuff()
 	//practice.LogParser()
 	//json_read_write.JSONStructWrite()
-	json_read_write.JSONStructRead()
+	//json_read_write.JSONStructRead()
+	game_store.GameStore()
 	//practice.FunctionStuff()
 
 }
