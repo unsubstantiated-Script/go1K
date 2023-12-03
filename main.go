@@ -12,5 +12,6 @@ func main() {
 	//json_read_write.JSONStructRead()
 	//game_store.GameStore()
 	//practice.FunctionStuff()
+	//practice.MakeDaPointer()
 
 }
