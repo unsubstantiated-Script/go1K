@@ -15,17 +15,17 @@ func LogParser() {
 	in := bufio.NewScanner(os.Stdin)
 
 	for in.Scan() {
-		p.lines++
-
-		parsed, err := parse(p, in.Text())
-		if err != nil {
-			fmt.Println(err)
-			return
-		}
-
+		parsed := parse(p, in.Text())
 		//Not going to get the info back from the function unless this override is in place.
-		p = update(p, parsed)
+		update(p, parsed)
 	}
+
+	summarize(p)
+	dumpErrs([]error{in.Err(), err(p)})
+}
+
+// No Pointer needed here because this function doesn't change anything, just prints it.
+func summarize(p *parser) {
 
 	sort.Strings(p.domains)
 
@@ -33,13 +33,18 @@ func LogParser() {
 	fmt.Println(strings.Repeat("-", 45))
 
 	for _, domain := range p.domains {
-		parsed := p.sum[domain]
-		fmt.Printf("%-30s %10d\n", domain, parsed.visits)
+		fmt.Printf("%-30s %10d\n", domain, p.sum[domain].visits)
 	}
 
+	fmt.Println()
 	fmt.Printf("%-30s %10d\n", "TOTAL", p.total)
-	// Let's handle the error
-	if err := in.Err(); err != nil {
-		fmt.Println("> Err:", err)
+}
+
+// dumpErrs simplifies handling multiple errors
+func dumpErrs(errs []error) {
+	for _, err := range errs {
+		if err != nil {
+			fmt.Println("> Err:", err)
+		}
 	}
 }
