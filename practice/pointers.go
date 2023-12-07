@@ -1,14 +1,27 @@
 package practice
 
-type computer struct {
-	brand string
-}
+import "fmt"
 
-type computer2 struct {
-	brand *string
-}
+//type computer struct {
+//	brand string
+//}
+//
+//type computer2 struct {
+//	brand *string
+//}
 
 func MakeDaPointer() {
+
+	schools := make([]map[int]string, 2)
+	for i := range schools {
+		schools[i] = make(map[int]string)
+	}
+
+	load(schools[0], []string{"batman", "superman"})
+	load(schools[1], []string{"green lazer", "tom tom"})
+
+	fmt.Println(schools[0])
+	fmt.Println(schools[1])
 
 	//var (
 	//	counter int
@@ -140,3 +153,9 @@ func MakeDaPointer() {
 //	*pn++
 //	fmt.Printf("pn      : %-13p addr: %-13p  *pn: %-13d\n", pn, &pn, *pn)
 //}
+
+func load(m map[int]string, students []string) {
+	for i, name := range students {
+		m[i+1] = name
+	}
+}
