@@ -1,7 +1,5 @@
 package main
 
-import "go1K/practice"
-
 func main() {
 	//	practice.IntroStuffs()
 	//practice.Exercises()
@@ -12,6 +10,6 @@ func main() {
 	//json_read_write.JSONStructRead()
 	//game_store.GameStore()
 	//practice.FunctionStuff()
-	practice.MakeDaPointer()
+	//practice.MakeDaPointer()
 
 }
