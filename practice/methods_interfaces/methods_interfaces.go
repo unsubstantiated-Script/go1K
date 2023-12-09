@@ -38,8 +38,8 @@ func MakeDaMethodAndInterface() {
 	var items []*game
 	items = append(items, &craftymine, &tootris)
 
-	my := list(items)
+	//my := List(items)
 	//my = nil
-	my.print()
+	//my.Print()
 
 }
