@@ -1,5 +1,7 @@
 package main
 
+import "go1K/practice/methods_interfaces"
+
 func main() {
 	//	practice.IntroStuffs()
 	//practice.Exercises()
@@ -11,5 +13,7 @@ func main() {
 	//game_store.GameStore()
 	//practice.FunctionStuff()
 	//practice.MakeDaPointer()
+
+	methods_interfaces.MakeDaMethodAndInterface()
 
 }
