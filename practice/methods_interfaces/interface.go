@@ -1,30 +1,44 @@
-package practice
-
-import "go1K/practice/methods_interfaces"
+package methods_interfaces
 
 func InterfacePractice() {
 	var (
-		craftymine = methods_interfaces.Game{
-			Title: "crafty mine",
-			Price: 7.5,
+		craftymine = game{
+			title: "crafty mine",
+			price: 7.5,
 		}
 
-		tootris = methods_interfaces.Game{
-			Title: "tootris",
-			Price: 25,
+		tootris = game{
+			title: "tootris",
+			price: 25,
 		}
-		deezmoby = methods_interfaces.Book{
-			Title: "Deez Moby",
-			Price: 15,
+		deezmoby = book{
+			title: "Deez Moby",
+			price: 15,
 		}
-		loxx = methods_interfaces.Puzzle{
-			Title: "Loxx",
-			Price: 25,
+		loxx = puzzle{
+			title: "Loxx",
+			price: 25,
+		}
+		yoda = toy{
+			title: "Yoda",
+			price: 250,
 		}
 	)
 
-	var store methods_interfaces.List
+	var store list
+	store = append(store, &craftymine, &tootris, deezmoby, loxx, &yoda)
 
-	store = append(store, &craftymine, &tootris, &deezmoby, &loxx)
-	store.Print()
+	store.discount(.5)
+
+	store.print()
+
+	//// Setting the interface
+	//var p Printer
+	//
+	//// Wrapping the struct in an interface value. Only methods provided by interface will work (i.e. print here not discount)
+	//// Interfaces isolate and decouple one part of the code.
+	//// Interface methods are dynamic values, they can change.
+	//p = &tootris
+	//
+	//p.Print()
 }

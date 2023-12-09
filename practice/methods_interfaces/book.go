@@ -7,7 +7,7 @@ type book struct {
 	price money
 }
 
-// To the left is the reciever this attaches the method to the struct
-func (b *book) print() {
-	fmt.Printf("%-15s:  %.2s\n", b.title, b.price.string())
+// Print To the left is the receiver this attaches the method to the struct
+func (b book) print() {
+	fmt.Printf("%-15s:  %s\n", b.title, b.price.string())
 }

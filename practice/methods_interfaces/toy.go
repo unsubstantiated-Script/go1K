@@ -2,15 +2,15 @@ package methods_interfaces
 
 import "fmt"
 
-type game struct {
+type toy struct {
 	title string
 	price money
 }
 
-func (g *game) print() {
-	fmt.Printf("%-15s:  %s\n", g.title, g.price.string())
+func (t *toy) print() {
+	fmt.Printf("%-15s:  %s\n", t.title, t.price.string())
 }
 
-func (g *game) discount(ratio float64) {
-	g.price *= money(1 - ratio)
+func (t *toy) discount(ratio float64) {
+	t.price *= money(1 - ratio)
 }
