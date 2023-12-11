@@ -1,27 +1,35 @@
 package methods_interfaces
 
 func MakeDaMethodAndInterface() {
-	var (
-		//mobydick = book{
-		//	title: "moby dick",
-		//	price: 10,
-		//}
+	//var (
+	//	mobydick = book{
+	//		title:     "moby dick",
+	//		price:     10,
+	//		published: 29123812321,
+	//	}
+	//
+	//	derBit = book{
+	//		title:     "Der Bit",
+	//		price:     15,
+	//		published: "1702244935",
+	//	}
+	//
+	//	kakenStranz = book{
+	//		title: "Kakenscranz",
+	//		price: 15,
+	//	}
+	//
+	//	craftymine = game{
+	//		title: "crafty mine",
+	//		price: 7.5,
+	//	}
+	//
+	//	tootris = game{
+	//		title: "tootris",
+	//		price: 25,
+	//	}
+	//)
 
-		//derBit = book{
-		//	title: "Der Bit",
-		//	price: 15,
-		//}
-
-		craftymine = game{
-			title: "crafty mine",
-			price: 7.5,
-		}
-
-		tootris = game{
-			title: "tootris",
-			price: 25,
-		}
-	)
 	//
 	////Calling like a method
 	//mobydick.print()
@@ -35,8 +43,16 @@ func MakeDaMethodAndInterface() {
 	//	h.addr()
 	//}
 
-	var items []*game
-	items = append(items, &craftymine, &tootris)
+	store := list{
+		book{title: "moby dick", price: 10, published: 1702244935},
+		book{title: "sherpa", price: 10, published: "1702244935"},
+		book{title: "kakkeryk", price: 10},
+	}
+
+	store.print()
+	//
+	//var items []*game
+	//items = append(items, &craftymine, &tootris)
 
 	//my := List(items)
 	//my = nil

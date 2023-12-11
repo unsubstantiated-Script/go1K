@@ -1,8 +1,6 @@
 package main
 
-import (
-	"go1K/practice/methods_interfaces"
-)
+import "go1K/practice/methods_interfaces"
 
 func main() {
 	//	practice.IntroStuffs()
@@ -15,7 +13,8 @@ func main() {
 	//game_store.GameStore()
 	//practice.FunctionStuff()
 	//practice.MakeDaPointer()
-
-	//methods_interfaces.MakeDaMethodAndInterface()
-	methods_interfaces.InterfacePractice()
+	methods_interfaces.MakeDaMethodAndInterface()
+	//methods_interfaces.InterfacePractice()
+	//methods_interfaces.InterfacePractice()
+	//empty_interface.EmptyInterface()
 }
