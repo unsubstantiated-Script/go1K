@@ -7,15 +7,16 @@ import (
 )
 
 type book struct {
-	title     string
-	price     money
+	product
 	published interface{}
 }
 
 // Print To the left is the receiver this attaches the method to the struct
-func (b book) print() {
+func (b *book) print() {
+	b.product.print()
+
 	p := format(b.published)
-	fmt.Printf("%-15s:  %s - (%v)\n", b.title, b.price.string(), p)
+	fmt.Printf("\t - (%v)\n", p)
 }
 
 func format(v interface{}) string {
