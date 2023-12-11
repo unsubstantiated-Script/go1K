@@ -4,12 +4,13 @@ import "fmt"
 
 // Printer is an abstract type, protocol, or contract that can be interfaced with.
 // No implementation
-type printer interface {
+type item interface {
 	print()
+	discount(ratio float64)
 }
 
-// List Going to store printer interface values here.
-type list []printer
+// List Going to store item interface values here.
+type list []item
 
 func (l list) print() {
 	if len(l) == 0 {
@@ -22,18 +23,8 @@ func (l list) print() {
 }
 
 func (l list) discount(ratio float64) {
-	// Setting up this type to check if it exists below
-	type discounter interface {
-		discount(float64)
-	}
 	for _, it := range l {
-		//We don't have discount methods for all the things, only games. So, extract the game type with a type assertion.
-		// isGame will make sure the game is the game we expect.
-		discountItem, ok := it.(discounter)
-		if !ok {
-			continue
-		}
-		discountItem.discount(ratio)
+		it.discount(ratio)
 	}
 
 }

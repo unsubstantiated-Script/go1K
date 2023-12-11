@@ -1,36 +1,36 @@
 package methods_interfaces
 
 func InterfacePractice() {
-	var (
-		craftymine = game{
-			title: "crafty mine",
-			price: 7.5,
-		}
-
-		tootris = game{
-			title: "tootris",
-			price: 25,
-		}
-		deezmoby = book{
-			title: "Deez Moby",
-			price: 15,
-		}
-		loxx = puzzle{
-			title: "Loxx",
-			price: 25,
-		}
-		yoda = toy{
-			title: "Yoda",
-			price: 250,
-		}
-	)
-
-	var store list
-	store = append(store, &craftymine, &tootris, deezmoby, loxx, &yoda)
-
-	store.discount(.5)
-
-	store.print()
+	//var (
+	//	craftymine = game{
+	//		title: "crafty mine",
+	//		price: 7.5,
+	//	}
+	//
+	//	tootris = game{
+	//		title: "tootris",
+	//		price: 25,
+	//	}
+	//	deezmoby = book{
+	//		title: "Deez Moby",
+	//		price: 15,
+	//	}
+	//	loxx = puzzle{
+	//		title: "Loxx",
+	//		price: 25,
+	//	}
+	//	yoda = toy{
+	//		title: "Yoda",
+	//		price: 250,
+	//	}
+	//)
+	//
+	//var store list
+	//store = append(store, &craftymine, &tootris, deezmoby, loxx, &yoda)
+	//
+	//store.discount(.5)
+	//
+	//store.print()
 
 	//// Setting the interface
 	//var p Printer
