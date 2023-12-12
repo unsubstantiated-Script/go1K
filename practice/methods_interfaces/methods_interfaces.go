@@ -43,18 +43,19 @@ func MakeDaMethodAndInterface() {
 	//	h.addr()
 	//}
 
-	store := list{
-		&book{product{"moby dick", 10}, 118281600},
-		&book{product{"odyssey", 15}, "733622400"},
-		&book{product{"hobbit", 25}, nil},
-		&puzzle{product{"rubik's cube", 5}},
-		&game{product{"minecraft", 20}},
-		&game{product{"tetris", 5}},
-		&toy{product{"yoda", 150}},
+	l := list{
+		//If a field is not used, it doesn't have to exist here...
+		{title: "moby dick", price: 10, released: toTimestamp(118281600)},
+		{title: "odyssey", price: 15, released: toTimestamp("733622400")},
+		{title: "hobbit", price: 25},
+		//{title: "rubik's cube", price: 5},
+		//{title: "minecraft", price: 20},
+		//{title: "tetris", price: 5},
+		//{title: "yoda", price: 150},
 	}
 
-	store.discount(.5)
-	store.print()
+	l.discount(.5)
+	l.print()
 	//
 	//var items []*game
 	//items = append(items, &craftymine, &tootris)
