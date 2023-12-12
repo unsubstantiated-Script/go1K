@@ -9,7 +9,7 @@ type timestamp struct {
 	time.Time
 }
 
-func (ts timestamp) string() string {
+func (ts timestamp) String() string {
 	if ts.IsZero() {
 		return "unknown"
 	}

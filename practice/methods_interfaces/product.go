@@ -10,8 +10,8 @@ type product struct {
 	released timestamp
 }
 
-func (p *product) print() {
-	fmt.Printf("%s: %s (%s)\n", p.title, p.price.string(), p.released.string())
+func (p *product) String() string {
+	return fmt.Sprintf("%s: %s (%s)", p.title, p.price, p.released)
 }
 
 func (p *product) discount(ratio float64) {
