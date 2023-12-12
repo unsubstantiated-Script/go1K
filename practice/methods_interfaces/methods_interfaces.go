@@ -1,5 +1,7 @@
 package methods_interfaces
 
+import "fmt"
+
 func MakeDaMethodAndInterface() {
 	//var (
 	//	mobydick = book{
@@ -55,7 +57,8 @@ func MakeDaMethodAndInterface() {
 	}
 
 	l.discount(.5)
-	l.print()
+	//l.print()
+	fmt.Print(l)
 	//
 	//var items []*game
 	//items = append(items, &craftymine, &tootris)

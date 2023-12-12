@@ -1,18 +1,27 @@
 package methods_interfaces
 
-import "fmt"
+import (
+	"strings"
+)
 
 // List Going to store item interface values here.
 type list []*product
 
-func (l list) print() {
+func (l list) String() string {
 	if len(l) == 0 {
-		fmt.Println("Sorry we're waiting for stuffs.")
-		return
+		return "Sorry we're waiting for stuffs.\n"
+
 	}
+
+	var str strings.Builder
+
 	for _, p := range l {
-		p.print()
+		str.WriteString("* ")
+		str.WriteString(p.String())
+		str.WriteRune('\n')
 	}
+
+	return str.String()
 }
 
 func (l list) discount(ratio float64) {
