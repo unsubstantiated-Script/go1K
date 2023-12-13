@@ -1,6 +1,9 @@
 package methods_interfaces
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 
 func MakeDaMethodAndInterface() {
 	//var (
@@ -56,7 +59,12 @@ func MakeDaMethodAndInterface() {
 		//{title: "yoda", price: 150},
 	}
 
-	l.discount(.5)
+	//l.discount(.5)
+
+	sort.Sort(sort.Reverse(l))
+
+	sort.Sort(byReleaseDate(l))
+
 	//l.print()
 	fmt.Print(l)
 	//
