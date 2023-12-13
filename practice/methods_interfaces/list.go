@@ -1,6 +1,7 @@
 package methods_interfaces
 
 import (
+	"sort"
 	"strings"
 )
 
@@ -29,4 +30,28 @@ func (l list) discount(ratio float64) {
 		p.discount(ratio)
 	}
 
+}
+
+func (l list) Len() int {
+	return len(l)
+}
+
+func (l list) Less(i, j int) bool {
+	return l[i].title < l[j].title
+}
+
+func (l list) Swap(i, j int) {
+	l[i], l[j] = l[j], l[i]
+}
+
+type byRelease struct {
+	list
+}
+
+func (br byRelease) Less(i, j int) bool {
+	return br.list[i].released.Before(br.list[j].released.Time)
+}
+
+func byReleaseDate(l list) sort.Interface {
+	return &byRelease{l}
 }
