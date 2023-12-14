@@ -37,7 +37,7 @@ func (l list) Len() int {
 }
 
 func (l list) Less(i, j int) bool {
-	return l[i].title < l[j].title
+	return l[i].Title < l[j].Title
 }
 
 func (l list) Swap(i, j int) {
@@ -49,7 +49,7 @@ type byRelease struct {
 }
 
 func (br byRelease) Less(i, j int) bool {
-	return br.list[i].released.Before(br.list[j].released.Time)
+	return br.list[i].Released.Before(br.list[j].Released.Time)
 }
 
 func byReleaseDate(l list) sort.Interface {
